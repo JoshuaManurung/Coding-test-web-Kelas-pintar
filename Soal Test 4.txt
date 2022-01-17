@@ -1,0 +1,31 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int number;
+        
+        System.out.print("Banyaknya Angka : ");
+        number = input.nextInt();
+        
+        int[] numbers = new int[number];
+        ArrayList<Integer> selisih = new ArrayList<Integer>();
+        
+        for (int i = 0; i<number ;i++ ){
+            numbers[i] = input.nextInt();
+        } 
+        
+        Arrays.sort(numbers);
+        
+        for(int i = 0; i<numbers.length; i++){
+            if(i+1 < numbers.length){
+                if(numbers[i] - numbers[i+1] < -1){
+                    selisih.add(numbers[i]);
+                }
+            }
+            // System.out.print(numbers[i]+" ");
+        }
+        
+        System.out.print("Output : "+ (selisih.get(0)+1));
+    }
+}

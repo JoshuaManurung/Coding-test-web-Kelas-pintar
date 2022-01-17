@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        String[] kata=new String[] {"sang gajah", "serigala", "harimau"};
+        String kalimat2="";
+        
+        String kalimat = "Berikut adalah kisah sang gajah. Sang gajah memiliki teman serigala bernama DoeSang. Gajah sering dibela oleh serigala ketika harimau mendekati gajah.";
+        
+        if(kalimat.contains(".")){
+            kalimat2 = kalimat.replace(".","");
+        }
+        
+        String kalimats[] = kalimat2.toLowerCase().split(" ");
+        
+        for(int i = 0; i<kata.length;i++){
+            for(int j = 0; j<kalimats.length; j++){
+                if(kalimats[j].equals(kata[i])){
+                    System.out.print(kalimats[j]+"-");
+                }
+                if(j+1 != kalimats.length){
+                    if((kalimats[j]+" "+kalimats[j+1]).equals(kata[i])){
+                        System.out.print(kalimats[j]+" "+kalimats[j+1]+"-");
+                    }
+                }
+            }
+        }
+    }
+}

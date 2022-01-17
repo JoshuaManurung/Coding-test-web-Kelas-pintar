@@ -1,0 +1,49 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Passowrd : ");
+        String password = input.nextLine();
+        
+        if(password.length() < 8){
+            System.out.print("Password tidak boleh kurang dari 8 karakter");
+        }
+        else if(password.length() > 32){
+            System.out.print("Password tidak boleh lebih dari 32 karakter");
+        }
+        else if(
+            String.valueOf(password.charAt(0)).matches("[0-9]+")
+        ){
+            System.out.print("Password tidak boleh diawali dengan angka");
+        }
+        else if(!password.matches(".\\d.")){
+            System.out.print("Password harus terdiri dari angka");
+        }
+        else if(!password.chars().anyMatch(Character::isUpperCase) || !password.chars().anyMatch(Character::isLowerCase)){
+            System.out.print("Password harus terdiri dari huruf besar dan huruf kecil");
+        }
+        else if(password.matches(".\\d."+".\\d."+".\\d.")){
+            System.out.print("Password tidak boleh terdiri dari 3 angka berurutan");
+        }
+        else if(!password.matches(".\\W.")){
+            System.out.print("Password harus terdiri dari simbol (contoh : @, !, #)");
+        }
+        else if(check(password)<=2){
+            System.out.print("Password harus terdiri lebih dari 2 simbol");
+        }
+        else{
+            System.out.print("Password Valid");
+        }
+    }
+    
+    public static int check(String password){
+        int count = 0;
+            for(int i = 0; i<password.length();i++){
+                if(String.valueOf(password.charAt(i)).matches(".\\W.")){
+                    count++;
+                }
+            }
+            return count;
+    }
+}
