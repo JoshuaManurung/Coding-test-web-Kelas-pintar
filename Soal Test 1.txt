@@ -1,0 +1,28 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+	    
+		Scanner input = new Scanner(System.in);
+		System.out.print("N = ");
+		int amount = input.nextInt();
+		
+		for (int i=0;i<amount ;i++ ){
+		    int input_number = input.nextInt();
+		    
+		    numbers.add(input_number);
+		} 
+		System.out.print("Output : ");
+		for(int x=0; x<numbers.size(); x++){
+		    if(numbers.get(x)%3 == 0 && numbers.get(x)%7 == 0){
+		       System.out.print("Z");
+		    }
+		    else{
+		        System.out.print(numbers.get(x));
+		    }
+		    
+		    System.out.print(",");
+		}
+    }
+}
