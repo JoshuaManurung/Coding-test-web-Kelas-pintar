@@ -13,3 +13,16 @@
 
 ### Soal No. 4
 ![Hasil soal 4](https://user-images.githubusercontent.com/57647919/149702404-dd982545-2f59-4555-8b23-1095d274134d.jpeg)
+
+## Hasil Soal test Web
+
+### Menjalankan Aplikasi
+1. Download File dari Github
+2. Kemudian jalankan XAMPP (Apache dan MySQL)
+3. Kemudian buka CMD
+4. cd ke Nama File yang sudah didownload
+5. Jalankan php artisan serve
+6. Buka localhost Anda
+
+### Screenshot Aplikasi
+
