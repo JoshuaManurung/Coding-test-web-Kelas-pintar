@@ -1,4 +1,4 @@
-<!doctype html>
+	<!doctype html>
 <html lang="en">
 
 <head>
@@ -38,7 +38,7 @@
 						<input type="text" value="" class="form-control" placeholder="Search dashboard...">
 						<span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>
 					</div> -->
-				</form>
+				<!-- </form> -->
 				<!-- <div class="navbar-btn navbar-btn-right">
 					<a class="btn btn-success update-pro" href="https://www.themeineed.com/downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
 				</div> -->
@@ -102,7 +102,15 @@
 									<div class="profile-main">
 										<img src="assets/img/user-medium.png" class="img-circle" alt="Avatar">
 										<h3 class="name">Samuel Gold</h3>
-										<span class="online-status status-available">Available</span>
+										<form action="/image-upload/store" method="POST" enctype="multipart/form-data">
+											@csrf
+
+											<div align="center" class="form-group">
+												<input type="file" name="file" required>
+											</div>
+
+											<button type="submit" class="btn btn-primary">Submit</button>
+										</form>
 									</div>
 									<div class="profile-stat">
 										<div class="row">
@@ -136,7 +144,7 @@
 										<h4 class="heading">About</h4>
 										<p>Interactively fashion excellent information after distinctive outsourcing.</p>
 									</div> -->
-									<div class="text-center"><a href="#" class="btn btn-primary">Edit Profile</a></div>
+									
 								</div>
 								<!-- END PROFILE DETAIL -->
 							</div>
